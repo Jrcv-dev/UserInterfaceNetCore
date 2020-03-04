@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<style>
+    html {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .boxlogin {
+        border-radius: 5px;
+        box-shadow: 0px 5px 10px #0094ff;
+        margin: 100px auto;
+        width: 500px;
+        --webki-border-radius: 4px;
+        -moz-border-radius: 4px;
+    }
+
+    input [type="submit"] {
+        margin-top: 15px;
+    }
+
+    #brand-image {
+        height: 80px;
+        width: 110px;
+    }
+
+    .jumbotroon {
+        float: right;
+    }
+</style>
+<body background="https://www.sodexoclub.com.mx/wp-content/uploads/2019/01/slider-1.png">
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">
+                        <img id="brand-image" alt="Website Logo" src="https://www.sodexoclub.com.mx/wp-content/uploads/2019/01/sodexoblue.png" />
+                        <p>Sodexo S.A de C.V</p>
+                    </a>
+                </div>
+            </div>
+        </div>*@
+
+    <div class="jumbotroon boxlogin">
+        @*action="/Home/Login" method="post"*@
+        <form action="/Home/Login" method="post" name="flogin" id="flogin">
+            <center> <h1 style="color:brown"> Welcome to SofttekStore </h1></center>
+            <br />
+            <div align="center">
+                @*@using (Html.BeginForm("Login", "Home", FormMethod.Post, new { encType = "multipart/form-data"}))
+                    {*@
+                <label>User: </label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="User" />
+                <br />
+                <label>Password: </label>
+                <input type="password" name="password" id="password" class=" form-control" placeholder="Password" />
+                <br />
+                <input type="submit" class="btn btn-success" value="Login" />
+                @*<input action="Home/RegisterUser" method="post" type="submit" class="btn btn-success" value="Register" />*@
+                <button class="btn btn-success">@Html.ActionLink("Registrarse", "RegisterUser")</button>
+                @*}*@
+            </div>
+        </form>
+    </div>
+</body>
